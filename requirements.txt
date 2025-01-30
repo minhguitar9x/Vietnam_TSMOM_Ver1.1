@@ -4,6 +4,6 @@ pandas
 plotly
 scipy
 matplotlib
-empyrical
 requests
 vnstock3
+empyrical

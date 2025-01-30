@@ -336,7 +336,7 @@ if __name__ =='__main__':
     Note: **The model will fixed the start date at 2018-01-01 due to lack of data before that period. End date will be today.**""")
     symbol = st.text_input('Enter stock symbol:').upper()
     isValidSymbol = False
-    stock_list = pd.read_csv(r'C:\Users\LNV\OneDrive\Minh Triết Đầu Tư\Vietnam_TSMOM\upload folder\StockList.csv')
+    stock_list = pd.read_csv('StockList.csv')
     stock_list = stock_list['Ticker'].to_list()
     # st.write(stock_list)
     for stock in stock_list:

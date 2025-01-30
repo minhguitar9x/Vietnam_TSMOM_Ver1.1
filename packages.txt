@@ -1,4 +1,0 @@
-python3-distutils
-build-essential
-gfortran
-libatlas-base-dev

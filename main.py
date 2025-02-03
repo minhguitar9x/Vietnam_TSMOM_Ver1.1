@@ -23,7 +23,7 @@ def main():
     now = datetime.datetime.now()
     end = now.strftime("%Y-%m-%d")
     @st.cache_data
-    def data_stock():
+    def data_stock(symbol, start, end):
         stock = load_stock_data(symbol,start,end)
         stock.index = pd.to_datetime(stock.index)
         index = load_index_data('VNINDEX', start, end)
@@ -34,7 +34,7 @@ def main():
         index = index[~index.index.duplicated(keep='first')]
 
         return stock, index
-    stock,index = data_stock()
+    stock,index = data_stock(symbol, start, end)
     # index = load_index_data('VNINDEX',start,end)
     # index.index = pd.to_datetime(index.index)
 
